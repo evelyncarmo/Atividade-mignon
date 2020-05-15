@@ -115,7 +115,7 @@ public class Exercicio1 {
             }  
         }
         
-        
+        // retorna a linha que é o centro da gravidade
         return cgl;
     }
     
