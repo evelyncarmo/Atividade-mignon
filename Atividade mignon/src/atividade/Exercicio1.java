@@ -40,11 +40,11 @@ public class Exercicio1 {
         
        double matriz2 [][] = new double [ql][qc];
         
-//       double [][] matriz = {{0.1,0.2,0.1,0.2,0.1},
-//                             {0.1,0.2,0.3,0.1,0.1},
-//                             {0.2,0.3,0.1,0.1,0.3},
-//                             {0.4,0.1,0.1,0.1,0.2},
-//                             {0.4,0.2,0.2,0.3,0.1}};
+       double [][] matriz = {{0.1,0.2,0.1,0.2,0.1},
+                             {0.1,0.2,0.3,0.1,0.1},
+                             {0.2,0.3,0.1,0.1,0.3},
+                             {0.4,0.1,0.1,0.1,0.2},
+                             {0.4,0.2,0.2,0.3,0.1}};
 
 //       double [][] matriz = {{0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1},
 //                             {0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2},
@@ -52,9 +52,7 @@ public class Exercicio1 {
 //                             {0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4},
 //                             {0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5}};
 
-        double [][] matriz = {{0.1,0.2,0.1},
-                              {0.1,0.2,0.3},
-                              {0.2,0.3,0.1}};
+       
        
        
         int cgl = gravidadeLinha(matriz, qc, ql);
@@ -101,7 +99,8 @@ public class Exercicio1 {
                             }
                         }
                         
-                        /*Se a porção 2 for maior que a porção 1 ele faz a troca para que o valor não seja negativo*/
+                        /*Se a porção 2 for maior que a porção 1 ele faz a troca para que o 
+                        valor não seja negativo*/
                         if (pl2 > pl1) {
                             double aux3 = pl2;
                             pl2 = pl1;
