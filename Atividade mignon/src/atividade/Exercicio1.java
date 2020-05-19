@@ -11,30 +11,7 @@ package atividade;
  */
 public class Exercicio1 {
     public static void main(String[] args) {
-        //soma de duas matrizes
-        
-        /*
-        //criando as matrizes a serem somadas
-        float [][] m1 = {{1,2,3},{4,5,6},{7,8,9}};
-        float [][] m2 = {{1,2,3},{4,5,6},{7,8,9}};
-
-        // matriz que vai receber a soma das outras duas matrizes
-        float [][] soma = new float[m1.length][m1.length];
-        
-        //percorre as linhas das matrizes
-        for(int i=0;i<soma.length;i++){
-            // percorre as colunas das matrizes
-            for(int j=0;j<soma.length;j++){
                 
-                //faz a matriz soma na posiçã ij receber  matriz 1 na posição ij + matriz 2 na posição ij e depois imprimi 
-                //a posição soma[i][j] que contem a soma das duas posições me cada matriz
-                soma[i][j] = m1[i][j]+m2[i][j];
-                System.out.print(soma[i][j]+" ");
-            }
-            System.out.println();
-        }*/
-        
-        
         int ql = 5;
         int qc = 5;
         
