@@ -13,7 +13,7 @@ public class Exercicio1 {
     public static void main(String[] args) {
                 
                 //faz a matriz soma na posiçã ij receber  matriz 1 na posição ij + matriz 2 na posição ij e depois imprimi 
-                //a posição soma[i][j] que contem a soma das duas posições me cada matriz
+                /*a posição soma[i][j] que contem a soma das duas posições me cada matriz
                 soma[i][j] = m1[i][j]+m2[i][j];
                 System.out.print(soma[i][j]+" ");
             }
