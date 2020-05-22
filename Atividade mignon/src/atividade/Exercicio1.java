@@ -15,17 +15,6 @@ public class Exercicio1 {
 
     public static void main(String[] args) {
         
-        Scanner scan = new Scanner(System.in);
-
-        System.out.println("Digite os numeros a serem ordenados, e os separe por virgula");
-        String n = scan.next();
-        String arq = "bubble.txt";
-
-        if (Arquivo.escreverArquivo(arq, n)) {
-
-        } else {
-            System.out.println("Erro ao salvar o arquivo");
-        }
 
         int ql = 5; // quantidade de linha
         int qc = 5; // quantidade de coluna
