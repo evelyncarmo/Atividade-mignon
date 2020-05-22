@@ -119,7 +119,8 @@ public class Arquivo {
             
             return vetor; // retorna o vetor em int
     }
-    public static int[] criarMatriz(String caminho) {
+    
+    public static double[] criarMatriz(String caminho) {
             // Cria uma variavel para receber o conteudo arquivo
             String conteudo = "";
 
@@ -155,7 +156,7 @@ public class Arquivo {
             
             //cria um vetor em string pra receber o conteudo (cada palavra numa posição diferente)
             String[] arquivo = (conteudo.split(","));
-            int[] vetor = new int[arquivo.length]; // cria um vetor com o mesmo tamanho do outro vetor que contem a mensagem
+            double[] vetor = new double[arquivo.length]; // cria um vetor com o mesmo tamanho do outro vetor que contem a mensagem
 
             for (int i = 0; i < arquivo.length; i++) {
                 vetor[i] = Integer.parseInt(arquivo[i].trim());    // coloca cada palavra numa posição do novo vetor porém no formato de numero

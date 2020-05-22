@@ -5,6 +5,8 @@
  */
 package atividade;
 
+import java.util.Scanner;
+
 /**
  *
  * @author vyvis
@@ -12,32 +14,36 @@ package atividade;
 public class Exercicio1 {
 
     public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Digite os numeros a serem ordenados, e os separe por virgula");
+        String n = scan.next();
+        String arq = "bubble.txt";
+
+        if (Arquivo.escreverArquivo(arq, n)) {
+
+        } else {
+            System.out.println("Erro ao salvar o arquivo");
+        }
 
         int ql = 5; // quantidade de linha
-        int qc = 10; // quantidade de coluna
+        int qc = 5; // quantidade de coluna
 
         double matriz2[][] = new double[ql][qc];
-        
-        /*double[][] matriz = {{0.1, 0.2, 0.1, 0.2, 0.1},
+
+        double[][] matriz = {{0.1, 0.2, 0.1, 0.2, 0.1},
         {0.1, 0.2, 0.3, 0.1, 0.1},
         {0.2, 0.3, 0.1, 0.1, 0.3},
         {0.4, 0.1, 0.1, 0.1, 0.2},
-        {0.4, 0.2, 0.2, 0.3, 0.1}};*/
+        {0.4, 0.2, 0.2, 0.3, 0.1}};
+       
 
-       double [][] matriz = {{0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1},
-                             {0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2},
-                            {0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3},
-                             {0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4},
-                             {0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5}};   
-        
-        
-        
         int cgl = gravidadeLinha(matriz, qc, ql);
-        int cgc = gravidadeColuna(matriz,qc,ql);
-        System.out.println("Centro da gravidade : "+cgl + " " + cgc);
+        int cgc = gravidadeColuna(matriz, qc, ql);
+        System.out.println("Centro da gravidade : " + cgl + " " + cgc);
     }
 
-    
     public static int gravidadeLinha(double[][] m, int c, int l) {
         double menor = 0; // recebe a soma de todas as posições para comparar depois
         int rodada = 1; // variavel para prender o laço do while
@@ -64,7 +70,7 @@ public class Exercicio1 {
                 if (i == ignorada) {
 
                     // contador pra percorrer da quantidade de linhas até a linha ignorada
-                    for (int ii = l-1; ii > ignorada; ii--) {
+                    for (int ii = l - 1; ii > ignorada; ii--) {
                         for (int j = 0; j < c; j++) {
                             pl2 += m[ii][j];// recebe a soma do numero armazenado na linha e todas as colunas    
                         }
@@ -105,9 +111,9 @@ public class Exercicio1 {
         }
 
         // retorna a linha que é o centro da gravidade
-        return cgl+1;   
+        return cgl + 1;
     }
-    
+
     public static int gravidadeColuna(double[][] m, int c, int l) {
         double menor = 0; // recebe a soma de todas as posições para comparar depois
         int rodada = 1; // variavel para prender o laço do while
@@ -128,12 +134,12 @@ public class Exercicio1 {
             double pl2 = 0; // vai receber a segunda porção
 
             // contador para entrar nas coluna
-            for (int i = 0; i < c; i++) {                
+            for (int i = 0; i < c; i++) {
                 //se a coluna percorrida for a coluna que está sendo "testada"
-                if (i == ignorada) {                 
+                if (i == ignorada) {
                     // contador pra percorrer da quantidade de linhas até a linha ignorada
                     for (int j = 0; j < l; j++) {
-                        for (int ii = c-1; ii > ignorada; ii--) {
+                        for (int ii = c - 1; ii > ignorada; ii--) {
                             pl2 += m[j][ii];// recebe a soma do numero armazenado na linha e todas as colunas    
                         }
                     }
@@ -173,7 +179,14 @@ public class Exercicio1 {
         }
 
         // retorna a linha que é o centro da gravidade
-        return cgc+1;   
+        return cgc + 1;
     }
 
+    public static void imprimeMatriz(double[][] m, int l, int c) {
+        for (int i = 0; i < l; i++) {
+            for (int j = 0; j < c; j++) {
+                System.out.println("v[" + i + "]:" + m[i]);
+            }
+        }
+    }
 }
